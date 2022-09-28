@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>PASSWORD GENERATOR</h1>
+    <form action="page" method="post">
+        {% csrf_token %}
+    <br><br>
+    <input type="number"  name="plength" placeholder="Enter Password Length">
+
+    <input type="submit" value="Generate!"/>
+    </form>
+    <br><br><br>
+        {% if context|length > 0 %}
+
+        {% for a in context%}
+        <input type="text" name="generated" width="60%" value="{{ a }}" readonly> <br/><br/>
+
+        {% endfor %}
+
+        {% endif %}
+</body>
+</html>

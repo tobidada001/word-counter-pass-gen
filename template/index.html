@@ -1,0 +1,26 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First App</title>
+    <link rel="stylesheet"  href="{% static 'style.css' %}"/>
+</head>
+<body>
+<div id="div">
+    <h2>SIGN UP</h2>
+    <br><br>
+
+    <form method="POST" action="">
+        {% csrf_token %}
+
+        <textarea name="tarea" rows="20" cols="60" id="tarea"> </textarea>
+ <br><br>
+        <input type="submit" value="Sign Up"/>
+    </form>
+</div>
+   Total number of words: {{length}}
+
+<a href="page"><h3>Second Page</h3></a>
+</body>
+</html>
